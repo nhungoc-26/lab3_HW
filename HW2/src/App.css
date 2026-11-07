@@ -1,0 +1,347 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 28px 5%;
+  background:
+    radial-gradient(ellipse at 50% 35%, #25334b 0%, transparent 55%),
+    #101827;
+  color: #f8fafc;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.app-header__icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #d9a85f;
+  color: #182235;
+  font-size: 25px;
+}
+
+.app-header__badge {
+  padding: 9px 15px;
+  border: 1px solid #40506a;
+  border-radius: 30px;
+  color: #b9c5d8;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 15px 55px;
+}
+
+.hero__eyebrow {
+  color: #d9a85f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 15px 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: #e3b66f;
+}
+
+.hero__description {
+  color: #aab7c9;
+  font-size: 15px;
+}
+
+.piano-section {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.piano-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  border: 1px solid #34445d;
+  border-radius: 16px 16px 0 0;
+  background: #1b293e;
+}
+
+.piano-controls__info {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.piano-controls__status,
+.piano-controls__voices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #aab7c9;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #56d6a0;
+  box-shadow: 0 0 10px #56d6a0;
+}
+
+.piano-controls__voices strong {
+  color: #e3b66f;
+  font-size: 17px;
+}
+
+.piano-controls__meter {
+  display: flex;
+  gap: 5px;
+}
+
+.voice-bar {
+  width: 9px;
+  height: 22px;
+  border-radius: 3px;
+  background: #43516a;
+}
+
+.voice-bar--active {
+  background: #e3b66f;
+}
+
+.piano-controls__stop {
+  padding: 10px 17px;
+  border: 1px solid #80575b;
+  border-radius: 8px;
+  background: #402c36;
+  color: #ffb5ae;
+  font-weight: 700;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.piano-controls__stop:hover {
+  background: #633b43;
+}
+
+.piano-frame {
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid #34445d;
+  border-top: 0;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(145deg, #27364c, #172338);
+  box-shadow: 0 25px 60px #0005;
+}
+
+.piano-frame__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px 15px;
+  color: #aab7c9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.piano-keyboard {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  user-select: none;
+  touch-action: none;
+}
+
+.piano-keyboard__white {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.piano-key {
+  font-family: inherit;
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+}
+
+.piano-key--white {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 1px solid #aeb4bf;
+  border-radius: 0 0 6px 6px;
+  background: linear-gradient(to bottom, #fff 0%, #f2f2f2 80%, #d9dce2 100%);
+  color: #7a8492;
+  box-shadow: 0 4px 0 #aeb4bf;
+  transition: background 0.08s, transform 0.08s;
+}
+
+.piano-key--white:hover {
+  background: #f5e8ce;
+}
+
+.piano-key--white.piano-key--pressed {
+  transform: translateY(4px);
+  background: linear-gradient(to bottom, #f0d8ad, #d9a85f);
+  box-shadow: 0 0 0 #aeb4bf;
+}
+
+.piano-key--black {
+  position: relative;
+  z-index: 2;
+  width: 62%;
+  height: 62%;
+  border: 1px solid #111827;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(to bottom, #354155, #101827 85%);
+  color: #aab7c9;
+  box-shadow: 0 5px 0 #080d16, 0 7px 8px #0005;
+  transition: background 0.08s, transform 0.08s;
+}
+
+.piano-key--black:hover {
+  background: linear-gradient(to bottom, #58647a, #25334b);
+}
+
+.piano-key--black.piano-key--pressed {
+  transform: translateY(4px);
+  background: linear-gradient(to bottom, #e3b66f, #a87535);
+  box-shadow: 0 1px 0 #080d16;
+}
+
+.piano-key__label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.piano-key--black .piano-key__label {
+  bottom: 7px;
+  color: #dce3ee;
+  font-size: 7px;
+}
+
+.piano-keyboard__black {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.piano-keyboard__black-position {
+  position: absolute;
+  top: 0;
+  width: calc(100% / 52);
+  height: 100%;
+  transform: translateX(-50%);
+  pointer-events: auto;
+}
+
+.piano-hint {
+  margin-top: 22px;
+  text-align: center;
+  color: #8291a8;
+  font-size: 12px;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 75px auto 10px;
+  padding-top: 20px;
+  border-top: 1px solid #34445d;
+  color: #718098;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 20px 3%;
+  }
+
+  .app-header__badge {
+    font-size: 8px;
+  }
+
+  .hero {
+    padding: 55px 10px 35px;
+  }
+
+  .piano-controls {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .piano-controls__info {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .piano-controls__meter {
+    gap: 3px;
+  }
+
+  .voice-bar {
+    width: 6px;
+  }
+
+  .piano-frame {
+    padding: 10px;
+  }
+
+  .piano-keyboard {
+    height: 160px;
+  }
+
+  .piano-key__label {
+    font-size: 6px;
+  }
+
+  .app-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

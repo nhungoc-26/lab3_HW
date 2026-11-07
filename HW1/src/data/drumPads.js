@@ -1,0 +1,51 @@
+export const drumPads = [
+  {
+    id: 'kick',
+    name: 'Kick',
+    key: 'W',
+    code: 'KeyW',
+    sound: '/sounds/kick.wav',
+  },
+  {
+    id: 'snare',
+    name: 'Snare',
+    key: 'A',
+    code: 'KeyA',
+    sound: '/sounds/snare.wav',
+  },
+  {
+    id: 'hihat',
+    name: 'Hi-Hat',
+    key: 'S',
+    code: 'KeyS',
+    sound: '/sounds/hihat.wav',
+  },
+  {
+    id: 'tom',
+    name: 'Tom',
+    key: 'D',
+    code: 'KeyD',
+    sound: '/sounds/tom.wav',
+  },
+  {
+    id: 'clap',
+    name: 'Clap',
+    key: 'J',
+    code: 'KeyJ',
+    sound: '/sounds/clap.wav',
+  },
+  {
+    id: 'crash',
+    name: 'Crash',
+    key: 'K',
+    code: 'KeyK',
+    sound: '/sounds/crash.wav',
+  },
+  {
+    id: 'ride',
+    name: 'Ride',
+    key: 'L',
+    code: 'KeyL',
+    sound: '/sounds/ride.wav',
+  },
+];
